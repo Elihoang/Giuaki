@@ -107,3 +107,53 @@ body {
 }
 
 .cleaner { clear: both; }
+
+/* Slider */
+#tooplate_middle {
+    margin-bottom: 30px;
+}
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    height: 360px; /* Adjust depending on image size */
+    background: #000;
+}
+
+#slider a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#slider a.active {
+    display: block;
+}
+
+#slider img {
+    border: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nivo-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #111;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    width: 100%;
+    z-index: 8;
+    padding: 10px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+.nivo-caption p {
+    padding: 0;
+    margin: 0;
+}

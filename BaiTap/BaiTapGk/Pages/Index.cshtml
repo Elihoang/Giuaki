@@ -5,15 +5,14 @@
 }
 
 <div id="tooplate_middle">
-    <div id="slider" style="position: relative; overflow: hidden; height: 360px;">
-        <a href="#"><img src="~/slideshow/01.jpg" alt="nature 1" title="Suspendisse quis velit ac nisl ultrices tristique a eu velit." style="width: 100%; display: block;" /></a>
-        <a href="#"><img src="~/slideshow/02.jpg" alt="nature 2" title="Fusce eget tellus eget felis ultrices volutpat et vitae mauris." style="width: 100%; display: none;" /></a>
-        <a href="#"><img src="~/slideshow/03.jpg" alt="nature 3" title="Duis non est nec dui tincidunt pulvinar lacinia vel quam." style="width: 100%; display: none;" /></a>
-        <a href="#"><img src="~/slideshow/04.jpg" alt="nature 4" title="Phasellus in orci eget neque tristique semper ut ac lacus." style="width: 100%; display: none;" /></a>
+    <div id="slider">
+        <a href="#" class="active"><img src="~/slideshow/01.jpg" alt="nature 1" title="Suspendisse quis velit ac nisl ultrices tristique a eu velit." /></a>
+        <a href="#"><img src="~/slideshow/02.jpg" alt="nature 2" title="Fusce eget tellus eget felis ultrices volutpat et vitae mauris." /></a>
+        <a href="#"><img src="~/slideshow/03.jpg" alt="nature 3" title="Duis non est nec dui tincidunt pulvinar lacinia vel quam." /></a>
+        <a href="#"><img src="~/slideshow/04.jpg" alt="nature 4" title="Phasellus in orci eget neque tristique semper ut ac lacus." /></a>
         
-        <!-- Fixed caption banner overlaid at the bottom -->
-        <div id="slider-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,0,0,0.8); color: #fff; padding: 10px 15px; font-size: 14px; box-sizing: border-box;">
-            Suspendisse quis velit ac nisl ultrices tristique a eu velit.
+        <div class="nivo-caption">
+            <p id="slider-caption-text">Suspendisse quis velit ac nisl ultrices tristique a eu velit.</p>
         </div>
     </div>
 </div>
@@ -22,3 +21,24 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            var $slides = $('#slider a:not(.nivo-caption)');
+            var $caption = $('#slider-caption-text');
+            var currentIndex = 0;
+            
+            setInterval(function() {
+                var $current = $slides.eq(currentIndex);
+                $current.removeClass('active');
+                
+                currentIndex = (currentIndex + 1) % $slides.length;
+                
+                var $next = $slides.eq(currentIndex);
+                $next.addClass('active');
+                $caption.text($next.find('img').attr('title'));
+            }, 5000);
+        });
+    </script>
+}
