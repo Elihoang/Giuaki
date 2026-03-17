@@ -1,10 +1,24 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
+<div id="tooplate_middle">
+    <div id="slider" style="position: relative; overflow: hidden; height: 360px;">
+        <a href="#"><img src="~/slideshow/01.jpg" alt="nature 1" title="Suspendisse quis velit ac nisl ultrices tristique a eu velit." style="width: 100%; display: block;" /></a>
+        <a href="#"><img src="~/slideshow/02.jpg" alt="nature 2" title="Fusce eget tellus eget felis ultrices volutpat et vitae mauris." style="width: 100%; display: none;" /></a>
+        <a href="#"><img src="~/slideshow/03.jpg" alt="nature 3" title="Duis non est nec dui tincidunt pulvinar lacinia vel quam." style="width: 100%; display: none;" /></a>
+        <a href="#"><img src="~/slideshow/04.jpg" alt="nature 4" title="Phasellus in orci eget neque tristique semper ut ac lacus." style="width: 100%; display: none;" /></a>
+        
+        <!-- Fixed caption banner overlaid at the bottom -->
+        <div id="slider-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,0,0,0.8); color: #fff; padding: 10px 15px; font-size: 14px; box-sizing: border-box;">
+            Suspendisse quis velit ac nisl ultrices tristique a eu velit.
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
