@@ -157,3 +157,119 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.greenage-services {
+  margin-bottom: 30px;
+  padding: 22px 24px;
+  background: #e6e6e6;
+  border: 1px solid #d4d4d4;
+}
+
+.greenage-services h1 {
+  margin: 0 0 22px;
+  color: #000;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.greenage-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+}
+
+.greenage-service {
+  flex: 1 1 460px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.greenage-service-icon {
+  width: 105px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.greenage-service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.greenage-service-content h2 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.18;
+  color: #0f3f6d;
+}
+
+.greenage-service-content p {
+  margin: 0;
+  font-size: 1.42rem;
+  line-height: 1.5;
+  color: #4c4c4c;
+}
+
+.greenage-highlight {
+  color: #f18531;
+  font-weight: 600;
+}
+
+.greenage-more-btn {
+  margin-top: 12px;
+  margin-left: auto;
+  display: inline-block;
+  min-width: 130px;
+  padding: 8px 18px;
+  border-radius: 14px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: #111;
+  text-decoration: none;
+  background: linear-gradient(#95df25, #63a509);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.greenage-more-btn:hover {
+  color: #000;
+  background: linear-gradient(#9eea2f, #6cb40d);
+}
+
+@media (max-width: 991px) {
+  .greenage-services h1 {
+    font-size: 2.5rem;
+  }
+
+  .greenage-service-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .greenage-service-content p,
+  .greenage-more-btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .greenage-services {
+    padding: 18px;
+  }
+
+  .greenage-service {
+    flex-direction: column;
+  }
+
+  .greenage-service-icon {
+    width: 88px;
+  }
+
+  .greenage-more-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
