@@ -26,6 +26,84 @@ body {
   text-align: end;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+.form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+#tooplate_menu {
+	clear: both;
+	height: 45px;
+	margin: 0 auto 30px auto;
+	padding: 0 10px;
+	background: url(/tooplate_menu.png) repeat-x;
+}
+
+#tooplate_menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+#tooplate_menu ul li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	background: url(/tooplate_menu_divider.png) center right no-repeat;
+}
+
+#tooplate_menu ul li.last {
+	background: none;
+}
+
+#tooplate_menu ul li a {
+	display: block;
+	height: 31px;
+	padding: 14px 30px 0;
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+}
+
+#tooplate_menu ul li a:hover, #tooplate_menu ul li a.current {
+	color: #6bb300;
+	background: url(/tooplate_menu_hover.png) bottom center no-repeat;
+}
+
+#search_box {
+	float: right;
+	width: 200px;
+	padding-top: 7px;
+}
+
+#search_box form {
+	margin: 0;
+	padding: 0;
+}
+
+#searchfield {
+    float: left;
+	width: 140px;
+	height: 25px;
+	padding: 0px 5px;
+	color: #ccc;
+    font-size: 12px;
+	background: #333;
+	border: 1px solid #111;
+	outline: none;
+    box-sizing: border-box;
+}
+
+#searchbutton {
+    float: right;
+    width: 32px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    background: url(/tooplate_button.png) no-repeat center;
+    border: none;
+    cursor: pointer;
+}
+
+.cleaner { clear: both; }
