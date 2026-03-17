@@ -222,16 +222,16 @@ body {
 
 a.more {
     display: inline-block;
-    width: 90px;
-    height: 26px;
-    line-height: 26px;
+    width: 125px;
+    height: 32px;
+    line-height: 32px;
     text-align: center;
     color: #000;
     font-weight: bold;
     text-decoration: none;
     background: #81c200;
     background: linear-gradient(to bottom, #aaf100, #5da300);
-    border-radius: 13px;
+    border-radius: 16px;
     font-size: 12px;
     margin-top: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -241,4 +241,63 @@ a.more:hover {
     background: #6bb300;
     background: linear-gradient(to bottom, #98de00, #4c8a00);
     color: #000;
+}
+
+/* Latest Projects */
+.latest_projects_section {
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.project_grid {
+    display: flex;
+    gap: 34px;
+    flex-wrap: wrap;
+}
+
+.project_item {
+    flex: 1 1 290px;
+}
+
+.project_item h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.project_thumb {
+    border: 1px solid #c7c7c7;
+    background: #fff;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.project_thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project_item p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+    .project_item {
+        flex-basis: 100%;
+    }
+
+    .wwd_content {
+        width: auto;
+        float: none;
+    }
+
+    .wwd_box img {
+        float: none;
+        margin: 0 0 12px 0;
+    }
 }
